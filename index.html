@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Форма регистрации</h1>
+        <form class="form" action="#" method="post" enctype="multipart/form-data">
+          <div class="form__item form__item_required">
+            <label class="form__label" for="user-surname">Фамилия</label>
+            <input type="text" placeholder="Иванов" id="user-surname" name="user_surname" required>
+          </div>
+          <div class="form__item form__item_required">
+            <label class="form__label" for="user-name">Имя</label>
+            <input type="text" placeholder="Иван" id="user-name" name="user_name" required>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="user-patronymic">Отчество (при наличии)</label>
+            <input type="text" placeholder="Иванович" id="user-patronymic" name="user_patronymic">
+          </div>
+          <div class="form__item form__item_required">
+            <label class="form__label" for="interests">Выберите тему:</label>
+            <select id="interests" name="interests" required>
+              <option selected value="design">Дизайн</option>
+              <option value="development">Разработка</option>
+              <option value="management">Менеджмент</option>
+            </select>
+          </div>
+          <div class="form__item form__item_required">
+            <span class="form__label">Выберите тарифный план:</span>
+            <div class="form__option">
+              <input type="radio" id="tariff-basic" name="tariff" value="basic" required>
+              <label for="tariff-basic">Базовый</label>
+            </div>
+            <div class="form__option">
+              <input type="radio" id="tariff-pro" name="tariff" value="pro">
+              <label for="tariff-pro">Профессиональный</label>
+            </div>
+          </div>
+          <div class="form__item form__item_required">
+            <label class="form__label" for="user-id">Идентификатор (ID)</label>
+            <input inputmode="numeric" pattern="\d+" placeholder="123456" name="user_id" id="user-id" required>
+          </div>
+          <div class="form__item form__item_checkbox">
+            <label class="form__label form__checkbox" for="terms">
+              <input type="checkbox" id="terms" name="terms" required>
+              <span>Согласие на обработку персональных данных</span>
+            </label>
+          </div>
+          <div class="form__item form__item_checkbox">
+            <label class="form__label form__checkbox" for="ads">
+              <input type="checkbox" id="ads" name="ads">
+              <span>Получать рассылки</span>
+            </label>
+          </div>
+          <button class="form__submit" type="submit">Отправить</button>
+        </form>
+    </main>
+</body>
+</html>
